@@ -16,7 +16,7 @@ export default defineField({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'paragraph',
+      name: 'subheading',
       type: 'text',
       title: 'Tekst pod nagłówkiem',
       validation: (Rule) => Rule.required(),
@@ -28,4 +28,11 @@ export default defineField({
       validation: (Rule) => Rule.required(),
     }),
   ],
+  preview: {
+    select: {
+      title: 'heading',
+      subtitle: 'subheading',
+      media: 'img',
+    },
+  },
 })

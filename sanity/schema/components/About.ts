@@ -10,16 +10,23 @@ export default defineField({
   icon,
   fields: [
     defineField({
-      name: 'heading',
-      type: 'text',
+      name: 'title',
+      type: 'string',
       title: 'Nagłówek',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'paragraph',
-      type: 'text',
-      title: 'Paragraf',
+      name: 'subtitle',
+      type: 'string',
+      title: 'Podtytuł',
       validation: (Rule) => Rule.required(),
     }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'subtitle',
+      icon: icon(),
+    },
+  },
 })
