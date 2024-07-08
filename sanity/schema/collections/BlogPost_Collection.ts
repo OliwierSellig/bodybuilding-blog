@@ -30,7 +30,7 @@ export default defineField({
     }),
     defineField({
       name: 'content',
-      type: 'text',
+      type: 'markdown',
       title: 'Pełen Artykuł',
       validation: (Rule) => Rule.required(),
     }),

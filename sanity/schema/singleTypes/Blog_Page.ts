@@ -8,13 +8,13 @@ export default defineType({
   fields: [
     defineField({
       name: 'heading',
-      type: 'text',
+      type: 'markdown',
       title: 'Nagłówek',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'paragraph',
-      type: 'text',
+      type: 'markdown',
       title: 'Paragraf',
       validation: (Rule) => Rule.required(),
     }),
