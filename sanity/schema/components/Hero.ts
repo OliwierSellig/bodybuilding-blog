@@ -1,5 +1,4 @@
 import {defineField} from 'sanity'
-import {removeMarkdown} from '../../utils/removeMarkdown'
 
 const title = 'Sekcja Hero'
 const icon = () => '🙌'
@@ -29,16 +28,4 @@ export default defineField({
       validation: (Rule) => Rule.required(),
     }),
   ],
-  preview: {
-    select: {
-      heading: 'heading',
-      media: 'img',
-    },
-    prepare: ({heading, media}) => ({
-      title,
-      subtitle: removeMarkdown(heading),
-      media,
-      icon,
-    }),
-  },
 })

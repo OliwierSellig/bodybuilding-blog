@@ -8,9 +8,9 @@ export default defineType({
   fields: [
     defineField({
       name: 'content',
-      type: 'text',
+      type: 'content',
       title: 'Komponenty podstrony',
-      //   options: {collapsible: true},
+      options: {collapsible: true},
     }),
   ],
 })

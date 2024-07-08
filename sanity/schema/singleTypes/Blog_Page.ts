@@ -19,11 +19,4 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
   ],
-
-  // defineField({
-  //   name: 'content',
-  //   type: 'content',
-  //   title: 'Komponenty podstrony',
-  //   options: {collapsible: true},
-  // }),
 })
