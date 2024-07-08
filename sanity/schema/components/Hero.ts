@@ -11,13 +11,13 @@ export default defineField({
   fields: [
     defineField({
       name: 'heading',
-      type: 'text',
+      type: 'markdown',
       title: 'Nagłówek',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'subheading',
-      type: 'text',
+      type: 'markdown',
       title: 'Tekst pod nagłówkiem',
       validation: (Rule) => Rule.required(),
     }),
@@ -34,5 +34,10 @@ export default defineField({
       subtitle: 'subheading',
       media: 'img',
     },
+  },
+  initialValue: {
+    heading: 'Zaawansowana Kulturystyka: Twoje Źródło Inspiracji i Wiedzy',
+    subheading:
+      'Odkryj zaawansowane techniki treningowe, sprawdzone strategie dietetyczne i motywacyjne porady, które pomogą Ci osiągnąć szczytowe wyniki w kulturystyce. Gotowy na przekroczenie własnych granic?',
   },
 })

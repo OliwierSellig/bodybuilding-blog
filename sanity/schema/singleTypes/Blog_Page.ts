@@ -7,13 +7,13 @@ export default defineType({
   icon: () => '📝',
   fields: [
     defineField({
-      name: 'heading',
+      name: 'title',
       type: 'markdown',
       title: 'Nagłówek',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'paragraph',
+      name: 'subtitle',
       type: 'markdown',
       title: 'Paragraf',
       validation: (Rule) => Rule.required(),

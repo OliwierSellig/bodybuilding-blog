@@ -11,13 +11,13 @@ export default defineField({
   fields: [
     defineField({
       name: 'title',
-      type: 'string',
+      type: 'markdown',
       title: 'Nagłówek',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
-      type: 'string',
+      type: 'markdown',
       title: 'Podtytuł',
       validation: (Rule) => Rule.required(),
     }),
@@ -36,13 +36,13 @@ export default defineField({
             }),
             defineField({
               name: 'heading',
-              type: 'text',
+              type: 'string',
               title: 'Nagłówek',
               validation: (Rule) => Rule.required(),
             }),
             defineField({
               name: 'paragraph',
-              type: 'text',
+              type: 'markdown',
               title: 'Paragraf',
               validation: (Rule) => Rule.required(),
             }),
@@ -59,5 +59,10 @@ export default defineField({
       subtitle: 'subtitle',
       icon: icon(),
     },
+  },
+  initialValue: {
+    title: 'Dlaczego Warto Czytać Naszego Bloga?',
+    subtitle:
+      'Zobacz, jak nasz blog może wzbogacić Twoją wiedzę, poprawić wyniki treningowe i dostarczyć inspiracji na każdym etapie Twojej kulturystycznej podróży. ',
   },
 })
