@@ -1,3 +1,30 @@
+// ------------- Custom Variables ------------------
+
+:root {
+  --primary-50: #f8fafc;
+  --primary-100: #f1f5f9;
+  --primary-200: #e2e8f0;
+  --primary-300: #cbd5e1;
+  --primary-400: #94a3b8;
+  --primary-500: #64748b;
+  --primary-600: #475569;
+  --primary-700: #334155;
+  --primary-800: #1e293b;
+  --primary-900: #0f172a;
+  --primary-950: #020617;
+
+  --secondary-300: #7dd3fc;
+  --secondary-400: #38bdf8;
+  --secondary-500: #0ea5e9;
+  --secondary-600: #0284c7;
+  --secondary-700: #0369a1;
+  --secondary-800: #075985;
+  --secondary-900: #0c4a6e;
+  --secondary-950: #082f49;
+
+  --pageMargin: clamp(16px, calc(40vw / 7.68), 40px);
+}
+
 // ------------- Global Rest -------------------
 
 html {
@@ -34,4 +61,53 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+// --------- Global Styles -------------
+
+body {
+  overflow: clip;
+  min-width: 320px;
+  background: var(--primary-100);
+  color: var(--primary-800);
+  font-size: clamp(1rem, calc(18vw / 7.68), calc(18rem / 16));
+  line-height: 152%;
+}
+
+main {
+  max-width: 1200px;
+  width: calc(100% - var(--pageMargin) * 2);
+  margin: 0 auto;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  overflow-wrap: anywhere;
+  font-weight: 400;
+  line-height: 142%;
+  color: var(--primary-800);
+  strong {
+    font-weight: 700;
+    color: var(--primary-700);
+  }
+}
+h1,
+.h1,
+h2,
+.h2 {
+  font-size: clamp(calc(24rem / 16), calc(36vw / 7.68), calc(36rem / 16));
+  color: var(--primary-800);
+  strong {
+    color: var(--primary-700);
+  }
 }
