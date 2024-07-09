@@ -1,3 +1,4 @@
+import About from "@/components/global/About";
 import Features from "@/components/global/Features";
 import Hero from "@/components/global/Hero";
 import LatestBlogEntries from "@/components/global/LatestBlogEntries";
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Features />
       <LatestBlogEntries />
+      <About />
     </>
   );
 }
