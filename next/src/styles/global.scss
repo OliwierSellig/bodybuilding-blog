@@ -71,12 +71,14 @@ img {
 // --------- Global Styles -------------
 
 body {
-  overflow: clip;
   min-width: 320px;
   background: var(--primary-100);
   color: var(--primary-800);
   font-size: clamp(1rem, calc(18vw / 7.68), calc(18rem / 16));
   line-height: 152%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main,
@@ -85,6 +87,10 @@ main,
   width: calc(100% - var(--pageMargin) * 2);
   margin: 0 auto;
   height: 100%;
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1,
@@ -116,5 +122,14 @@ h2,
   color: var(--primary-800);
   strong {
     color: var(--primary-700);
+  }
+}
+
+a {
+  transition: color 0.2s ease-in-out;
+  font-weight: 500;
+  &:hover,
+  &:focus-visible {
+    color: var(--secondary-600);
   }
 }

@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid var(--primary-200);
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(calc(14rem / 16), calc(16vw / 7.68), calc(16rem / 16));
+  padding: 18px 0;
+  flex-wrap: wrap-reverse;
+  row-gap: 14px;
+}
+
+.created {
+  color: var(--primary-700);
+  font-size: clamp(calc(12rem / 16), calc(14vw / 7.68), calc(14rem / 16));
+  a {
+    margin-left: 4px;
+    color: var(--primary-900);
+    font-size: clamp(calc(14rem / 16), calc(16vw / 7.68), calc(16rem / 16));
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

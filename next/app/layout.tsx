@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/global.scss";
 import { plusJakartaSans } from "../src/utils/fonts";
 import Header from "@/components/global/Header";
+import Footer from "@/components/global/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className={plusJakartaSans.className}>
         <Header />
         <main id="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );
