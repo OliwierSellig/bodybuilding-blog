@@ -1,0 +1,28 @@
+.section {
+  padding-bottom: clamp(48px, calc(80vw / 7.68), 120px);
+}
+
+.header {
+  max-width: calc(640rem / 16);
+  margin: 0 auto clamp(28px, 4.6875vw, 36px);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.subtitle {
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+}

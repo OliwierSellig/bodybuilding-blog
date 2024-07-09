@@ -1,10 +1,9 @@
 import Image from "next/image";
 import styles from "./Hero.module.scss";
-import type { HeroTypes } from "./Hero.types";
 import Button from "@/components/ui/Button";
 import heroImage from "@/public/img/hero.png";
 
-export default function Hero({}: HeroTypes) {
+export default function Hero() {
   return (
     <section className={styles.section}>
       <div className={styles.image}>
@@ -15,12 +14,12 @@ export default function Hero({}: HeroTypes) {
           Zaawansowana Kulturystyka:{" "}
           <strong>Twoje Źródło Inspiracji i Wiedzy</strong>
         </h1>
-        <p>
+        <p className={styles.paragraph}>
           Odkryj zaawansowane techniki treningowe, sprawdzone strategie
           dietetyczne i motywacyjne porady, które pomogą Ci osiągnąć szczytowe
           wyniki w kulturystyce. Gotowy na przekroczenie własnych granic?
         </p>
-        <Button>Odkryj Blog</Button>
+        <Button href="/blog">Odkryj Blog</Button>
       </div>
     </section>
   );

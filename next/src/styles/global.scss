@@ -127,8 +127,17 @@ h2,
   }
 }
 
+h2,
+.h2 {
+  font-size: clamp(calc(24rem / 16), calc(28vw / 7.68), calc(32rem / 16));
+  color: var(--primary-800);
+  strong {
+    color: var(--primary-700);
+  }
+}
+
 a {
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   font-weight: 500;
   &:hover,
   &:focus-visible {
