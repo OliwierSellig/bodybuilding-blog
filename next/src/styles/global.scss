@@ -53,6 +53,11 @@ ul {
   font-weight: normal;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ol,
 ul {
   list-style: none;
@@ -74,10 +79,12 @@ body {
   line-height: 152%;
 }
 
-main {
+main,
+.max-width {
   max-width: 1200px;
   width: calc(100% - var(--pageMargin) * 2);
   margin: 0 auto;
+  height: 100%;
 }
 
 h1,
