@@ -12,7 +12,12 @@ export default function BlogPostItem({
   return (
     <article className={styles.article}>
       <div className={styles.image}>
-        <Image alt="" src={image} fill />
+        <Image
+          alt=""
+          src={image}
+          fill
+          sizes="(max-width: 410px) 95vw, (max-width: 680px) 360px, (max-width: 920px) 280px, (max-width: 1280px) 30vw, 384px"
+        />
       </div>
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>

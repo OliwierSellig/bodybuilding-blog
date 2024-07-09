@@ -1,14 +1,18 @@
 import Image from "next/image";
 import styles from "./About.module.scss";
-import type { AboutTypes } from "./About.types";
 import about from "@/public/img/about.png";
 import Button from "@/components/ui/Button";
 
-export default function About({}: AboutTypes) {
+export default function About() {
   return (
     <section className={styles.section}>
       <div className={styles.image}>
-        <Image src={about} fill alt="Nasz zespół" />
+        <Image
+          src={about}
+          fill
+          alt="Nasz zespół"
+          sizes="(max-width: 760px) 95vw, (max-width: 1280px) 46vw, 584px"
+        />
       </div>
       <header className={styles.header}>
         <h2 className={styles.title}>

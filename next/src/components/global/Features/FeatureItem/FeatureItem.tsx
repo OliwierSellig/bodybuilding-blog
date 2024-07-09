@@ -10,7 +10,12 @@ export default function FeatureItem({
   return (
     <li className={styles.item}>
       <div className={styles.image}>
-        <Image src={image} fill alt="" />
+        <Image
+          src={image}
+          fill
+          alt=""
+          sizes="(max-width: 610px) 160px, (max-width: 920px) 26vw, 240px"
+        />
       </div>
       <div>
         <h3 className={styles.title}>{title}</h3>
