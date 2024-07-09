@@ -1,13 +1,12 @@
 import Link from "next/link";
 import styles from "./Footer.module.scss";
-import type { FooterTypes } from "./Footer.types";
 
 const links = [
   { title: "Polityka Prywatności", href: "/" },
   { title: "Regulamin", href: "/" },
 ];
 
-export default function Footer({}: FooterTypes) {
+export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`${styles.container} max-width`}>

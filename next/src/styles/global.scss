@@ -91,6 +91,8 @@ main,
 
 main {
   flex-grow: 1;
+  margin: clamp(32px, calc(42vw / 7.68), 42px) auto
+    clamp(80px, calc(92vw / 7.68), 124px);
 }
 
 h1,

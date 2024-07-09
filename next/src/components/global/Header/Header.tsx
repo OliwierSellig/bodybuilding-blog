@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./Header.module.scss";
-import type { HeaderTypes } from "./Header.types";
 import logo from "@/public/img/logo.png";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ const links = [
   { title: "Blog", href: "/blog" },
 ];
 
-export default function Header({}: HeaderTypes) {
+export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`${styles.container} max-width`}>
