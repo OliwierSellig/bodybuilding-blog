@@ -16,7 +16,7 @@ export default function Footer() {
         </p>
         <nav className={styles.nav}>
           {links.map(({ title, href }, i) => (
-            <Link className={styles.link} href={href}>
+            <Link className={styles.link} href={href} key={i}>
               {title}
             </Link>
           ))}

@@ -25,7 +25,7 @@ export default function Header() {
         </Link>
         <nav className={styles.nav}>
           {links.map(({ href, title }, i) => (
-            <Link className={styles.link} href={href}>
+            <Link className={styles.link} href={href} key={i}>
               {title}
             </Link>
           ))}
