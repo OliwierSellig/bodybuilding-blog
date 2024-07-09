@@ -1,3 +1,4 @@
+import SectionHeader from "@/components/ui/SectionHeader";
 import FeatureItem from "./FeatureItem";
 import styles from "./Features.module.scss";
 import type { FeaturesTypes } from "./Features.types";
@@ -28,22 +29,22 @@ const features = [
 
 export default function Features({}: FeaturesTypes) {
   return (
-    <div className={styles.section}>
-      <header className={styles.header}>
-        <h2 className={styles.title}>
+    <section className={styles.section}>
+      <SectionHeader>
+        <SectionHeader.Title>
           Dlaczego Warto Czytać <strong>Naszego Bloga?</strong>
-        </h2>
-        <p className={styles.subtitle}>
+        </SectionHeader.Title>
+        <SectionHeader.Subtitle>
           Zobacz, jak nasz blog może wzbogacić Twoją wiedzę, poprawić wyniki
           treningowe i dostarczyć inspiracji na każdym etapie Twojej
           kulturystycznej podróży.
-        </p>
-      </header>
+        </SectionHeader.Subtitle>
+      </SectionHeader>
       <ul className={styles.list}>
         {features.map((feature, i) => (
-          <FeatureItem {...feature} />
+          <FeatureItem {...feature} key={i} />
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

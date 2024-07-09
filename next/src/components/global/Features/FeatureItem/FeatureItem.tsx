@@ -12,7 +12,7 @@ export default function FeatureItem({
       <div className={styles.image}>
         <Image src={image} fill alt="" />
       </div>
-      <div className={styles.content}>
+      <div>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
