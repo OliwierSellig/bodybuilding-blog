@@ -31,24 +31,32 @@ export default defineField({
             defineField({
               name: 'img',
               type: 'image',
-              title: 'Ikonka',
+              title: 'Obrazek',
               validation: (Rule) => Rule.required(),
             }),
             defineField({
-              name: 'heading',
+              name: 'title',
               type: 'string',
               title: 'Nagłówek',
               validation: (Rule) => Rule.required(),
             }),
             defineField({
-              name: 'paragraph',
+              name: 'subtitle',
               type: 'markdown',
               title: 'Paragraf',
               validation: (Rule) => Rule.required(),
             }),
           ],
+          preview: {
+            select: {
+              title: 'title',
+              subtitle: 'subtitle',
+              media: 'img',
+            },
+          },
         },
       ],
+
       title: 'Lista',
       validation: (Rule) => Rule.required().max(4),
     }),
