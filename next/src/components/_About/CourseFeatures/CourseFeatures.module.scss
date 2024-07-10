@@ -1,0 +1,36 @@
+.section {
+  // ------------- Setupowanie stylów generalnych dla tego komponentu -----------
+  color: #463630;
+
+  & * {
+    font-weight: 300;
+    line-height: clamp(calc(24rem / 16), calc(28vw / 7.68), calc(28rem / 16));
+    font-family: var(--font-lato);
+  }
+
+  h2,
+  h3 {
+    font-size: clamp(calc(24rem / 16), calc(36vw / 7.68), calc(36rem / 16));
+    line-height: clamp(calc(32rem / 16), calc(42vw / 7.68), calc(42rem / 16));
+    margin-bottom: clamp(20px, calc(28vw / 7.68), 28px);
+    color: currentColor;
+
+    strong {
+      font-size: clamp(calc(32rem / 16), calc(54vw / 7.68), calc(54rem / 16));
+      font-weight: 400;
+      font-family: var(--font-city-streetwear);
+      color: currentColor;
+    }
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: clamp(48px, calc(64vw / 7.68), 64px);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(calc(16px / 16), calc(28vw / 7.68), calc(28rem / 16));
+}

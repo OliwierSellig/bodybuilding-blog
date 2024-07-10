@@ -22,7 +22,10 @@
   --secondary-900: #0c4a6e;
   --secondary-950: #082f49;
 
-  --pageMargin: clamp(16px, calc(40vw / 7.68), 40px);
+  --pageMargin: clamp(16px, calc(32vw / 7.68), 40px);
+  @media (max-width: 899px) and (min-width: 600px) {
+    --pageMargin: clamp(40px, calc(80vw / 7.68), 80px);
+  }
 }
 
 // ------------- Global Rest -------------------
@@ -72,7 +75,9 @@ img {
 
 body {
   min-width: 320px;
-  background: var(--primary-100);
+  // Zmień background na kierunek-dzierganie albo odwrotnie
+  // background-color: var(--primary-100);
+  background-color: #fdfbf8;
   color: var(--primary-800);
   font-size: clamp(1rem, calc(18vw / 7.68), calc(18rem / 16));
   line-height: 152%;

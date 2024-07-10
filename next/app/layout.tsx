@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/global.scss";
-import { plusJakartaSans } from "../src/utils/fonts";
+import { cityStreetwear, lato, plusJakartaSans } from "../src/utils/fonts";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
 
@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={plusJakartaSans.className}>
+      <body
+        className={`${plusJakartaSans.className} ${lato.variable} ${cityStreetwear.variable}`}
+      >
         <Header />
         <main id="main">{children}</main>
         <Footer />

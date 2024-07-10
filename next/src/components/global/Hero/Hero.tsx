@@ -8,6 +8,7 @@ export default function Hero() {
     <section className={styles.section}>
       <div className={styles.image}>
         <Image
+          loading="eager"
           src={heroImage}
           alt="Zdjęcie Hero"
           sizes="(max-width: 440px) 280px, (max-width: 768px) 62.5vw, 480px"
