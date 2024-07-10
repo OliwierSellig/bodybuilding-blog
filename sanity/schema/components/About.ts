@@ -21,12 +21,18 @@ export default defineField({
       title: 'Podtytuł',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'img',
+      type: 'image',
+      title: 'Zdjęcie',
+      validation: (Rule) => Rule.required(),
+    }),
   ],
   preview: {
     select: {
       title: 'title',
       subtitle: 'subtitle',
-      icon: icon(),
+      media: 'img',
     },
   },
   initialValue: {

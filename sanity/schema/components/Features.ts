@@ -4,7 +4,7 @@ const title = 'Sekcja Features'
 const icon = () => '✨'
 
 export default defineField({
-  name: 'Featres',
+  name: 'Features',
   type: 'object',
   title,
   icon,

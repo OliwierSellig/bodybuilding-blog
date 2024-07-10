@@ -9,6 +9,7 @@ export const Features_Query = `
     list[] {
       title,
       subtitle,
+      "image": img.asset -> url
     },
   },
 `;

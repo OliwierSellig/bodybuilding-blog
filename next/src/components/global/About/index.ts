@@ -5,6 +5,7 @@ export default About;
 export const About_Query = `
   _type == "About" => {
     title,
-    subtitle
+    subtitle,
+    "image": img.asset -> url
   },
 `;

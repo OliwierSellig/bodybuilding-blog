@@ -6,6 +6,7 @@ export default Hero;
 export const Hero_Query = `
   _type == "Hero" => {
     title,
-    subtitle
+    subtitle,
+    "image": img.asset -> url
   },
 `;

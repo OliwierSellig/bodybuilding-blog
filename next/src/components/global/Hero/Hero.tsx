@@ -10,6 +10,7 @@ export default function Hero({ title, subtitle, image }: HeroTypes) {
         <Image
           loading="eager"
           src={image}
+          fill
           alt="Zdjęcie Hero"
           sizes="(max-width: 440px) 280px, (max-width: 768px) 62.5vw, 480px"
         />
