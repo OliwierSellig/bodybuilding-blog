@@ -4,19 +4,19 @@ const title = 'Sekcja Hero'
 const icon = () => '🙌'
 
 export default defineField({
-  name: 'HeroSection',
+  name: 'Hero',
   type: 'object',
   title,
   icon,
   fields: [
     defineField({
-      name: 'heading',
+      name: 'title',
       type: 'markdown',
       title: 'Nagłówek',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'subheading',
+      name: 'subtitle',
       type: 'markdown',
       title: 'Tekst pod nagłówkiem',
       validation: (Rule) => Rule.required(),
@@ -30,8 +30,8 @@ export default defineField({
   ],
   preview: {
     select: {
-      title: 'heading',
-      subtitle: 'subheading',
+      title: 'title',
+      subtitle: 'subtitle',
       media: 'img',
     },
   },

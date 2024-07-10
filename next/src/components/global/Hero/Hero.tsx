@@ -1,31 +1,24 @@
 import Image from "next/image";
 import styles from "./Hero.module.scss";
 import Button from "@/components/ui/Button";
-import heroImage from "@/public/img/hero.png";
+import { HeroTypes } from "./Hero.types";
 
-export default function Hero() {
+export default function Hero({ title, subtitle, image }: HeroTypes) {
   return (
     <section className={styles.section}>
       <div className={styles.image}>
         <Image
           loading="eager"
-          src={heroImage}
+          src={image}
           alt="Zdjęcie Hero"
           sizes="(max-width: 440px) 280px, (max-width: 768px) 62.5vw, 480px"
         />
       </div>
-      <div className={styles.content}>
-        <h1 className={styles.heading}>
-          Zaawansowana Kulturystyka:{" "}
-          <strong>Twoje Źródło Inspiracji i Wiedzy</strong>
-        </h1>
-        <p className={styles.paragraph}>
-          Odkryj zaawansowane techniki treningowe, sprawdzone strategie
-          dietetyczne i motywacyjne porady, które pomogą Ci osiągnąć szczytowe
-          wyniki w kulturystyce. Gotowy na przekroczenie własnych granic?
-        </p>
+      <header className={styles.content}>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.subtitle}>{subtitle}</p>
         <Button href="/blog">Odkryj Blog</Button>
-      </div>
+      </header>
     </section>
   );
 }

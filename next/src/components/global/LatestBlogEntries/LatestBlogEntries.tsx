@@ -4,6 +4,7 @@ import art1 from "@/public/img/art1.jpg";
 import art2 from "@/public/img/art2.jpg";
 import art3 from "@/public/img/art3.jpg";
 import BlogPostItem from "@/components/ui/BlogPostItem";
+import { LatestBlogEntriesTypes } from "./LatestBlogEntries.types";
 
 const latestEntries = [
   {
@@ -29,17 +30,15 @@ const latestEntries = [
   },
 ];
 
-export default function LatestBlogEntries() {
+export default function LatestBlogEntries({
+  title,
+  subtitle,
+}: LatestBlogEntriesTypes) {
   return (
     <section className={styles.section}>
       <SectionHeader>
-        <SectionHeader.Title>
-          Świeże Wpisy i <strong>Aktualne Porady</strong>
-        </SectionHeader.Title>
-        <SectionHeader.Subtitle>
-          Sprawdź nasze najnowsze artykuły pełne aktualnych porad,
-          zaawansowanych technik treningowych i nowinek ze świata kulturystyki.
-        </SectionHeader.Subtitle>
+        <SectionHeader.Title>{title}</SectionHeader.Title>
+        <SectionHeader.Subtitle>{subtitle}</SectionHeader.Subtitle>
       </SectionHeader>
       <div className={styles.list}>
         {latestEntries.map((entry, i) => (

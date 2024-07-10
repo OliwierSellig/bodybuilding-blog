@@ -4,7 +4,7 @@ const title = 'Najnowsze Artykuły'
 const icon = () => '📚'
 
 export default defineField({
-  name: 'Articles',
+  name: 'LatestBlogEntries',
   type: 'object',
   title,
   icon,
