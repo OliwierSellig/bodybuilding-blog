@@ -1,4 +1,4 @@
-import { revalidateTag } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
 import { parseBody } from "next-sanity/webhook";
 
@@ -17,7 +17,8 @@ export async function POST(req: NextRequest) {
       return new Response("Bad Request", { status: 400 });
     }
 
-    revalidateTag(body._type);
+    // revalidateTag(body._type);
+    revalidatePath("/");
     return NextResponse.json({
       status: 200,
       revalidated: true,

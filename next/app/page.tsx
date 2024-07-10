@@ -2,12 +2,15 @@ import Components, {
   Components_Query,
   ComponentTypes,
 } from "@/components/Components";
-import { client } from "@/utils/sanity";
+import { sanityFetch } from "@/utils/sanity.fetch";
 
 const query = async (): Promise<{ content: ComponentTypes[] }> => {
-  return await client.fetch(`
+  return await sanityFetch({
+    query: `
       *[_type == "Index_Page"][0]{${Components_Query}}
-    `);
+    `,
+    tags: ["Index_Page"],
+  });
 };
 
 export default async function Home() {
