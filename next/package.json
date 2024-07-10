@@ -10,6 +10,7 @@
     "rfc": "plop"
   },
   "dependencies": {
+    "@sanity/webhook": "^4.0.4",
     "next": "14.2.4",
     "next-sanity": "^9.4.2",
     "react": "^18",
