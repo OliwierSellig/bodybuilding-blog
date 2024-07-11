@@ -41,4 +41,11 @@ export default defineField({
       validation: Rule => Rule.required(),
     }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'description',
+      media: 'image',
+    },
+  },
 });

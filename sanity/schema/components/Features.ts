@@ -1,4 +1,5 @@
 import { defineField } from 'sanity';
+import { removeMarkdown } from '../../utils/removeMarkdown';
 
 const title = 'Sekcja Features';
 const icon = () => '✨';
@@ -14,12 +15,15 @@ export default defineField({
       type: 'markdown',
       title: 'Nagłówek',
       validation: Rule => Rule.required(),
+      initialValue: 'Dlaczego Warto Czytać Naszego Bloga?',
     }),
     defineField({
       name: 'subtitle',
       type: 'markdown',
       title: 'Podtytuł',
       validation: Rule => Rule.required(),
+      initialValue:
+        'Zobacz, jak nasz blog może wzbogacić Twoją wiedzę, poprawić wyniki treningowe i dostarczyć inspiracji na każdym etapie Twojej kulturystycznej podróży. ',
     }),
     defineField({
       name: 'list',
@@ -67,10 +71,12 @@ export default defineField({
       subtitle: 'subtitle',
       icon: icon(),
     },
-  },
-  initialValue: {
-    title: 'Dlaczego Warto Czytać Naszego Bloga?',
-    subtitle:
-      'Zobacz, jak nasz blog może wzbogacić Twoją wiedzę, poprawić wyniki treningowe i dostarczyć inspiracji na każdym etapie Twojej kulturystycznej podróży. ',
+    prepare({ title, subtitle, icon }) {
+      return {
+        title: removeMarkdown(title),
+        subtitle: removeMarkdown(subtitle),
+        icon,
+      };
+    },
   },
 });

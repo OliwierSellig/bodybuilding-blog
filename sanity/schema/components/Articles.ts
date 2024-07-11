@@ -1,4 +1,5 @@
 import { defineField } from 'sanity';
+import { removeMarkdown } from '../../utils/removeMarkdown';
 
 const title = 'Najnowsze Artykuły';
 const icon = () => '📚';
@@ -14,12 +15,15 @@ export default defineField({
       type: 'markdown',
       title: 'Nagłówek',
       validation: Rule => Rule.required(),
+      initialValue: 'Świeże Wpisy i Aktualne Porady',
     }),
     defineField({
       name: 'subtitle',
       type: 'markdown',
       title: 'Podtytuł',
       validation: Rule => Rule.required(),
+      initialValue:
+        'Sprawdź nasze najnowsze artykuły pełne aktualnych porad, zaawansowanych technik treningowych i nowinek ze świata kulturystyki. Bądź na bieżąco z najświeższymi trendami i informacjami.',
     }),
   ],
   preview: {
@@ -28,10 +32,12 @@ export default defineField({
       subtitle: 'subtitle',
       icon: icon(),
     },
-  },
-  initialValue: {
-    title: 'Świeże Wpisy i Aktualne Porady',
-    subtitle:
-      'Sprawdź nasze najnowsze artykuły pełne aktualnych porad, zaawansowanych technik treningowych i nowinek ze świata kulturystyki. Bądź na bieżąco z najświeższymi trendami i informacjami.',
+    prepare({ title, subtitle, icon }) {
+      return {
+        title: removeMarkdown(title),
+        subtitle: removeMarkdown(subtitle),
+        icon,
+      };
+    },
   },
 });
