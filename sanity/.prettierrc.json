@@ -8,5 +8,6 @@
   "bracketSameLine": false,
   "arrowParens": "avoid",
   "braceStyle": "stroustrup",
+  "bracketSpacing": true,
   "importFormatting": "auto"
 }
