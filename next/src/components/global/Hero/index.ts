@@ -1,3 +1,4 @@
+import { ImgDataQuery } from '@/components/ui/image';
 import Hero from './Hero';
 export type { HeroTypes } from './Hero.types';
 
@@ -7,6 +8,8 @@ export const Hero_Query = `
   _type == "Hero" => {
     title,
     subtitle,
-    "image": img.asset -> url
+    img {
+      ${ImgDataQuery}
+    }
   },
 `;

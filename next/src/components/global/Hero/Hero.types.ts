@@ -1,7 +1,7 @@
-import { StaticImageData } from 'next/image';
+import { ImgDataTypes } from '@/components/ui/image';
 
 export type HeroTypes = {
   title: string;
   subtitle: string;
-  image: string | StaticImageData;
+  img: ImgDataTypes;
 };

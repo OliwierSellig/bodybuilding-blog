@@ -8,15 +8,10 @@
   @media (max-width: 960px) {
     grid-template-columns: 1fr;
   }
-}
 
-.image {
-  width: clamp(280px, calc(480vw / 7.68), 480px);
-  margin: 0 auto;
-  aspect-ratio: 1/1;
-  position: relative;
-  & img {
-    object-fit: cover;
+  img {
+    width: clamp(280px, calc(480vw / 7.68), 480px);
+    margin: 0 auto;
   }
 }
 

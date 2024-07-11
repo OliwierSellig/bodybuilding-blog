@@ -4,18 +4,13 @@
   gap: 32px;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     grid-template-columns: 1fr;
   }
-}
 
-.image {
-  position: relative;
-  border-radius: 13px;
-  overflow: hidden;
-  height: clamp(240px, calc(320vw / 7.68), 360px);
-
-  & img {
+  img {
+    border-radius: 13px;
+    height: clamp(240px, calc(320vw / 7.68), 360px);
     object-fit: cover;
   }
 }

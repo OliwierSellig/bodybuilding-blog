@@ -3,12 +3,13 @@ import styles from './About.module.scss';
 import Button from '@/components/ui/Button';
 import { AboutTypes } from './About.types';
 import Markdown from '@/components/ui/Markdown';
+import Img from '@/components/ui/image';
 
-export default function About({ title, subtitle, image }: AboutTypes) {
+export default function About({ title, subtitle, img }: AboutTypes) {
   return (
     <section className={styles.section}>
       <div className={styles.image}>
-        <Image src={image} fill alt='Nasz zespół' sizes='(max-width: 760px) 95vw, (max-width: 1280px) 46vw, 584px' />
+        <Img data={img} sizes='(max-width: 760px) 95vw, (max-width: 1280px) 46vw, 584px' />
       </div>
       <header className={styles.header}>
         <Markdown.h2>{title}</Markdown.h2>

@@ -1,3 +1,4 @@
+import { ImgDataTypes } from '@/components/ui/image';
 import { StaticImageData } from 'next/image';
 
 export type FeaturesTypes = {
@@ -6,6 +7,6 @@ export type FeaturesTypes = {
   list: {
     title: string;
     subtitle: string;
-    image: string | StaticImageData;
+    img: ImgDataTypes;
   }[];
 };
