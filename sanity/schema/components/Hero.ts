@@ -1,7 +1,7 @@
-import {defineField} from 'sanity'
+import { defineField } from 'sanity';
 
-const title = 'Sekcja Hero'
-const icon = () => '🙌'
+const title = 'Sekcja Hero';
+const icon = () => '🙌';
 
 export default defineField({
   name: 'Hero',
@@ -13,19 +13,19 @@ export default defineField({
       name: 'title',
       type: 'markdown',
       title: 'Nagłówek',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
       type: 'markdown',
       title: 'Tekst pod nagłówkiem',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'img',
       type: 'image',
       title: 'Zdjęcie',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
@@ -40,4 +40,4 @@ export default defineField({
     subheading:
       'Odkryj zaawansowane techniki treningowe, sprawdzone strategie dietetyczne i motywacyjne porady, które pomogą Ci osiągnąć szczytowe wyniki w kulturystyce. Gotowy na przekroczenie własnych granic?',
   },
-})
+});

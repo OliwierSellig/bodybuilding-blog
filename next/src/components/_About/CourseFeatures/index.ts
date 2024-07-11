@@ -1,2 +1,2 @@
-import CourseFeatures from "./CourseFeatures";
+import CourseFeatures from './CourseFeatures';
 export default CourseFeatures;

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'Index_Page',
@@ -10,7 +10,7 @@ export default defineType({
       name: 'content',
       type: 'content',
       title: 'Komponenty podstrony',
-      options: {collapsible: true},
+      options: { collapsible: true },
     }),
   ],
-})
+});

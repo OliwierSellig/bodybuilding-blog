@@ -1,7 +1,7 @@
-import SectionHeader from "@/components/ui/SectionHeader";
-import FeatureItem from "./FeatureItem";
-import styles from "./Features.module.scss";
-import type { FeaturesTypes } from "./Features.types";
+import SectionHeader from '@/components/ui/SectionHeader';
+import FeatureItem from './FeatureItem';
+import styles from './Features.module.scss';
+import type { FeaturesTypes } from './Features.types';
 
 export default function Features({ subtitle, title, list }: FeaturesTypes) {
   return (

@@ -1,5 +1,5 @@
-import Hero from "./Hero";
-export type { HeroTypes } from "./Hero.types";
+import Hero from './Hero';
+export type { HeroTypes } from './Hero.types';
 
 export default Hero;
 

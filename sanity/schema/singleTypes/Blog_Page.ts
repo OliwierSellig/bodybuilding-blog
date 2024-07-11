@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'Blog_Page',
@@ -10,13 +10,13 @@ export default defineType({
       name: 'title',
       type: 'markdown',
       title: 'Nagłówek',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
       type: 'markdown',
       title: 'Paragraf',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
   ],
-})
+});

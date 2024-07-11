@@ -1,10 +1,7 @@
-import About, { About_Query, AboutTypes } from "./global/About";
-import Features, { Features_Query, FeaturesTypes } from "./global/Features";
-import Hero, { Hero_Query, HeroTypes } from "./global/Hero";
-import LatestBlogEntries, {
-  LatestBlogEntries_Query,
-  LatestBlogEntriesTypes,
-} from "./global/LatestBlogEntries";
+import About, { About_Query, AboutTypes } from './global/About';
+import Features, { Features_Query, FeaturesTypes } from './global/Features';
+import Hero, { Hero_Query, HeroTypes } from './global/Hero';
+import LatestBlogEntries, { LatestBlogEntries_Query, LatestBlogEntriesTypes } from './global/LatestBlogEntries';
 
 type componentsMapTypes = {
   Hero: HeroTypes;
@@ -24,9 +21,7 @@ export default function Components({ data }: { data: ComponentTypes[] }) {
       Hero: <Hero {...(item as HeroTypes)} />,
       Features: <Features {...(item as FeaturesTypes)} />,
       About: <About {...(item as AboutTypes)} />,
-      LatestBlogEntries: (
-        <LatestBlogEntries {...(item as LatestBlogEntriesTypes)} />
-      ),
+      LatestBlogEntries: <LatestBlogEntries {...(item as LatestBlogEntriesTypes)} />,
     };
     const DynamicComponent = componentsMapTypes[componentType];
     if (!DynamicComponent) return null;

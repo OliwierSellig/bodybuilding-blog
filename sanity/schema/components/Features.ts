@@ -1,7 +1,7 @@
-import {defineField} from 'sanity'
+import { defineField } from 'sanity';
 
-const title = 'Sekcja Features'
-const icon = () => '✨'
+const title = 'Sekcja Features';
+const icon = () => '✨';
 
 export default defineField({
   name: 'Features',
@@ -13,13 +13,13 @@ export default defineField({
       name: 'title',
       type: 'markdown',
       title: 'Nagłówek',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
       type: 'markdown',
       title: 'Podtytuł',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'list',
@@ -32,19 +32,19 @@ export default defineField({
               name: 'img',
               type: 'image',
               title: 'Obrazek',
-              validation: (Rule) => Rule.required(),
+              validation: Rule => Rule.required(),
             }),
             defineField({
               name: 'title',
               type: 'string',
               title: 'Nagłówek',
-              validation: (Rule) => Rule.required(),
+              validation: Rule => Rule.required(),
             }),
             defineField({
               name: 'subtitle',
               type: 'markdown',
               title: 'Paragraf',
-              validation: (Rule) => Rule.required(),
+              validation: Rule => Rule.required(),
             }),
           ],
           preview: {
@@ -58,7 +58,7 @@ export default defineField({
       ],
 
       title: 'Lista',
-      validation: (Rule) => Rule.required().max(4),
+      validation: Rule => Rule.required().max(4),
     }),
   ],
   preview: {
@@ -73,4 +73,4 @@ export default defineField({
     subtitle:
       'Zobacz, jak nasz blog może wzbogacić Twoją wiedzę, poprawić wyniki treningowe i dostarczyć inspiracji na każdym etapie Twojej kulturystycznej podróży. ',
   },
-})
+});

@@ -1,7 +1,7 @@
-import {defineField} from 'sanity'
+import { defineField } from 'sanity';
 
-const title = 'Najnowsze Artykuły'
-const icon = () => '📚'
+const title = 'Najnowsze Artykuły';
+const icon = () => '📚';
 
 export default defineField({
   name: 'LatestBlogEntries',
@@ -13,13 +13,13 @@ export default defineField({
       name: 'title',
       type: 'markdown',
       title: 'Nagłówek',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
       type: 'markdown',
       title: 'Podtytuł',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
@@ -34,4 +34,4 @@ export default defineField({
     subtitle:
       'Sprawdź nasze najnowsze artykuły pełne aktualnych porad, zaawansowanych technik treningowych i nowinek ze świata kulturystyki. Bądź na bieżąco z najświeższymi trendami i informacjami.',
   },
-})
+});

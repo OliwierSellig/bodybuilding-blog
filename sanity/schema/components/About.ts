@@ -1,7 +1,7 @@
-import {defineField} from 'sanity'
+import { defineField } from 'sanity';
 
-const title = 'O Blogu'
-const icon = () => '🌍'
+const title = 'O Blogu';
+const icon = () => '🌍';
 
 export default defineField({
   name: 'About',
@@ -13,19 +13,19 @@ export default defineField({
       name: 'title',
       type: 'markdown',
       title: 'Nagłówek',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
       type: 'markdown',
       title: 'Podtytuł',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'img',
       type: 'image',
       title: 'Zdjęcie',
-      validation: (Rule) => Rule.required(),
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
@@ -40,4 +40,4 @@ export default defineField({
     subtitle:
       'Poznaj naszą misję i zespół pasjonatów kulturystyki, którzy dzielą się swoją wiedzą i doświadczeniem, aby pomóc Ci osiągnąć maksymalne wyniki w Twojej sportowej podróży.',
   },
-})
+});

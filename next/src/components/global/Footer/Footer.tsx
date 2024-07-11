@@ -1,9 +1,9 @@
-import Link from "next/link";
-import styles from "./Footer.module.scss";
+import Link from 'next/link';
+import styles from './Footer.module.scss';
 
 const links = [
-  { title: "Polityka Prywatności", href: "/" },
-  { title: "Regulamin", href: "/" },
+  { title: 'Polityka Prywatności', href: '/' },
+  { title: 'Regulamin', href: '/' },
 ];
 
 export default function Footer() {
@@ -11,8 +11,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`${styles.container} max-width`}>
         <p className={styles.created}>
-          Stworzone przez{" "}
-          <a href="https://github.com/OliwierSellig">Oliwier Sellig</a>
+          Stworzone przez <a href='https://github.com/OliwierSellig'>Oliwier Sellig</a>
         </p>
         <nav className={styles.nav}>
           {links.map(({ title, href }, i) => (

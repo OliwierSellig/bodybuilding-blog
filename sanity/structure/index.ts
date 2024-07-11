@@ -1,7 +1,7 @@
-import {StructureResolver} from 'sanity/structure'
-import {createSingleton} from '../utils/createSingleton'
+import { StructureResolver } from 'sanity/structure';
+import { createSingleton } from '../utils/createSingleton';
 
-export const structure: StructureResolver = (S) =>
+export const structure: StructureResolver = S =>
   S.list()
     .title('Zawartość')
     .items([
@@ -9,4 +9,4 @@ export const structure: StructureResolver = (S) =>
       S.divider(),
       createSingleton(S, 'Blog_Page'),
       S.documentTypeListItem('BlogPost_Collection'),
-    ])
+    ]);
