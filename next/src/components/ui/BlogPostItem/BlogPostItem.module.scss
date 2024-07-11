@@ -15,19 +15,17 @@
     max-width: 360px;
     margin: 0 auto;
   }
-}
 
-.image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16/9;
-  & img {
+  img {
+    width: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
-  }
 
-  @media (max-width: 1024px) and (min-width: 680px) {
-    aspect-ratio: auto;
-    min-width: 280px;
+    @media (max-width: 1024px) and (min-width: 680px) {
+      aspect-ratio: auto;
+      min-width: 280px;
+      height: 100%;
+    }
   }
 }
 
