@@ -18,7 +18,6 @@ export async function POST(req: NextRequest) {
     }
 
     revalidateTag(body._type);
-    // revalidatePath("/");
     return NextResponse.json({
       status: 200,
       revalidated: true,

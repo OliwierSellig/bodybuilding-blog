@@ -12,5 +12,6 @@ const query = async (): Promise<{ content: ComponentTypes[] }> => {
 
 export default async function Home() {
   const { content } = await query();
+  console.log(content);
   return <Components data={content} />;
 }

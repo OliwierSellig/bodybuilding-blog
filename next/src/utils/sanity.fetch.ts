@@ -1,5 +1,6 @@
 import 'server-only';
 import { createClient, type ClientConfig, type QueryParams } from '@sanity/client';
+import { isPreviewDeployment, isProductionDeployment } from './is-preview-deployment';
 
 const config: ClientConfig = {
   projectId: process.env.SANITY_PROJECT_ID,
@@ -20,7 +21,18 @@ export async function sanityFetch<QueryResponse>({
   tags: string[];
 }): Promise<QueryResponse> {
   return client.fetch<QueryResponse>(query, qParams, {
-    cache: 'force-cache',
-    next: { tags },
+    ...(!isProductionDeployment
+      ? {
+          cache: 'reload',
+        }
+      : {
+          ...(isPreviewDeployment || !tags
+            ? {
+                cache: 'no-cache',
+              }
+            : {
+                next: { tags },
+              }),
+        }),
   });
 }
