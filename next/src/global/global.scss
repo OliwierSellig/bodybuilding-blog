@@ -148,3 +148,12 @@ a {
     color: var(--secondary-600);
   }
 }
+
+.blog-list {
+  display: grid;
+  align-items: stretch;
+  gap: 24px;
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

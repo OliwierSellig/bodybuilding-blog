@@ -11,7 +11,7 @@ export default function LatestBlogEntries({ title, subtitle, posts }: LatestBlog
         <Markdown.h2>{title}</Markdown.h2>
         <Markdown.p>{subtitle}</Markdown.p>
       </SectionHeader>
-      <div className={styles.list}>
+      <div className='blog-list'>
         {posts.map((entry, i) => (
           <BlogPostItem key={i} {...entry} />
         ))}
