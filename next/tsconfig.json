@@ -19,7 +19,7 @@
     ],
     "paths": {
       "@/components/*": ["./src/components/*"],
-      "@/styles/*": ["./src/styles/*"],
+      "@/global/*": ["./src/global/*"],
       "@/utils/*": ["./src/utils/*"],
       "@/public/*": ["./public/*"],
       "@/app/*": ["./app/*"]

@@ -1,10 +1,22 @@
 import { Plus_Jakarta_Sans, Lato } from 'next/font/google';
 import localFont from 'next/font/local';
 
-export const cityStreetwear = localFont({
+export const cityStreetwearTtf = localFont({
   src: '../../public/fonts/city-streetwaer.ttf',
   weight: '400',
-  variable: '--font-city-streetwear',
+  variable: '--font-city-streetwearTtf',
+});
+
+export const cityStreetwearWoff = localFont({
+  src: '../../public/fonts/city-streetwaer.woff',
+  weight: '400',
+  variable: '--font-city-streetwearWoff',
+});
+
+export const cityStreetwearWoff2 = localFont({
+  src: '../../public/fonts/city-streetwaer.woff2',
+  weight: '400',
+  variable: '--font-city-streetwearWoff2',
 });
 
 export const plusJakartaSans = Plus_Jakarta_Sans({

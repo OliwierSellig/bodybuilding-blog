@@ -5,6 +5,9 @@
   color: var(--primary-100);
   font-size: clamp(14px, calc(16vw / 7.68), 16px);
   box-shadow: 0px 8px 24px 0px rgba(3, 105, 161, 0.1);
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 
   &:hover,
   &:focus-visible {

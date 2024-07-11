@@ -34,8 +34,8 @@ export default function LatestBlogEntries({ title, subtitle }: LatestBlogEntries
   return (
     <section className={styles.section}>
       <SectionHeader>
-        <SectionHeader.Title>{title}</SectionHeader.Title>
-        <SectionHeader.Subtitle>{subtitle}</SectionHeader.Subtitle>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
       </SectionHeader>
       <div className={styles.list}>
         {latestEntries.map((entry, i) => (

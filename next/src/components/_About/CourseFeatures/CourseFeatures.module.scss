@@ -18,7 +18,9 @@
     strong {
       font-size: clamp(calc(32rem / 16), calc(54vw / 7.68), calc(54rem / 16));
       font-weight: 400;
-      font-family: var(--font-city-streetwear);
+      font-family: var(--font-city-streetwearWoff2);
+      font-family: var(--font-city-streetwearWoff1);
+      font-family: var(--font-city-streetwearTtf);
       color: currentColor;
     }
   }
