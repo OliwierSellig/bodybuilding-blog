@@ -30,6 +30,11 @@
     max-width: 360px;
     margin: 0 auto;
   }
+
+  p {
+    margin-top: auto;
+    font-size: clamp(calc(14rem / 16), calc(14vw / 7.68), calc(16rem / 16));
+  }
 }
 
 .image {
@@ -50,6 +55,4 @@
 }
 
 .subtitle {
-  margin-top: auto;
-  font-size: clamp(calc(14rem / 16), calc(14vw / 7.68), calc(16rem / 16));
 }

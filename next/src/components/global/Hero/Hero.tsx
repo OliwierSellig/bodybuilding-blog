@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './Hero.module.scss';
 import Button from '@/components/ui/Button';
 import { HeroTypes } from './Hero.types';
+import Markdown from '@/components/ui/Markdown';
 
 export default function Hero({ title, subtitle, image }: HeroTypes) {
   return (
@@ -16,8 +17,8 @@ export default function Hero({ title, subtitle, image }: HeroTypes) {
         />
       </div>
       <header className={styles.content}>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.subtitle}>{subtitle}</p>
+        <Markdown.h2>{title}</Markdown.h2>
+        <Markdown.p>{subtitle}</Markdown.p>
         <Button href='/blog'>Odkryj Blog</Button>
       </header>
     </section>

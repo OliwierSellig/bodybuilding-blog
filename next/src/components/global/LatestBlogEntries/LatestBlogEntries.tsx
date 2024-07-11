@@ -5,6 +5,7 @@ import art2 from '@/public/img/art2.jpg';
 import art3 from '@/public/img/art3.jpg';
 import BlogPostItem from '@/components/ui/BlogPostItem';
 import { LatestBlogEntriesTypes } from './LatestBlogEntries.types';
+import Markdown from '@/components/ui/Markdown';
 
 const latestEntries = [
   {
@@ -34,8 +35,8 @@ export default function LatestBlogEntries({ title, subtitle }: LatestBlogEntries
   return (
     <section className={styles.section}>
       <SectionHeader>
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <Markdown.h2>{title}</Markdown.h2>
+        <Markdown.p>{subtitle}</Markdown.p>
       </SectionHeader>
       <div className={styles.list}>
         {latestEntries.map((entry, i) => (

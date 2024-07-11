@@ -2,13 +2,14 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import styles from './Features.module.scss';
 import type { FeaturesTypes } from './Features.types';
 import Image from 'next/image';
+import Markdown from '@/components/ui/Markdown';
 
 export default function Features({ subtitle, title, list }: FeaturesTypes) {
   return (
     <section className={styles.section}>
       <SectionHeader>
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <Markdown.h2>{title}</Markdown.h2>
+        <Markdown.p>{subtitle}</Markdown.p>
       </SectionHeader>
       <ul className={styles.list}>
         {list.map(({ title, image, subtitle }, i) => (
@@ -18,7 +19,7 @@ export default function Features({ subtitle, title, list }: FeaturesTypes) {
             </div>
             <div>
               <h3 className={styles.title}>{title}</h3>
-              <p className={styles.subtitle}>{subtitle}</p>
+              <Markdown.p>{subtitle}</Markdown.p>
             </div>
           </li>
         ))}
