@@ -1,0 +1,16 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(32px, calc(38vw / 7.68), 48px);
+  img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 7px;
+  }
+}
+.date {
+  margin-bottom: 16px;
+}

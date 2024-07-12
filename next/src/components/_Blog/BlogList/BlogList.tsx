@@ -8,19 +8,20 @@ import Pagination from '@/components/ui/Pagination';
 
 const POSTS_PER_PAGE = 6;
 
-const query = async (): Promise<BlogPostItemTypes[]> => {
+const query = async (page: number): Promise<{ posts: BlogPostItemTypes[]; numPosts: number }> => {
   return await sanityFetch({
     query: `
-      *[_type == "BlogPost_Collection"] | order(_createdAt desc) [0...${POSTS_PER_PAGE}]{
-    ${BlogPostItem_Query}
-  }
+      {"posts": *[_type == "BlogPost_Collection"] | order(_createdAt desc) [${POSTS_PER_PAGE * (page - 1)}...${POSTS_PER_PAGE * page}]{
+      ${BlogPostItem_Query}
+      },
+      "numPosts": count(*[_type == "BlogPost_Collection"])}
     `,
     tags: ['BlogPost_Collection'],
   });
 };
 
 export default async function BlogList({ title, subtitle, params }: BlogListTypes) {
-  const posts = await query();
+  const { posts, numPosts } = await query(parseInt(params['page']) || 1);
   return (
     <section className={styles.section}>
       <SectionHeader>
@@ -32,7 +33,7 @@ export default async function BlogList({ title, subtitle, params }: BlogListType
           <BlogPostItem {...post} key={i} />
         ))}
       </div>
-      <Pagination page={params['page']} postsPerPage={POSTS_PER_PAGE} numPosts={8} />
+      <Pagination page={params['page']} postsPerPage={POSTS_PER_PAGE} numPosts={numPosts} />
     </section>
   );
 }
