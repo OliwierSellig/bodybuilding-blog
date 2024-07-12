@@ -3,6 +3,7 @@ import styles from './Breadcrumbs.module.scss';
 import type { BreadcrumbsTypes } from './Breadcrumbs.types';
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import BreadcrumbsSchema from '@/global/Schema/BreadcrumbsSchema';
 
 export default function Breadcrumbs({ data = [], visible = true }: BreadcrumbsTypes) {
   data = [
@@ -14,6 +15,7 @@ export default function Breadcrumbs({ data = [], visible = true }: BreadcrumbsTy
   ];
   return (
     <>
+      <BreadcrumbsSchema data={data} />
       {visible && data.length >= 2 && (
         <nav className={styles.nav}>
           {data.map(({ name, path }, i) => {
