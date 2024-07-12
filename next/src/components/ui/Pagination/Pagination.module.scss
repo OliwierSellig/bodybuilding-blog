@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: clamp(calc(18rem / 16), calc(20vw / 7.68), calc(24rem / 16));
+  font-weight: 500;
+  justify-content: center;
+  padding-top: clamp(24px, calc(32vw / 7.68), 32px);
+}
+
+.link {
+  width: 32px;
+  height: 32px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: var(--primary-400);
+  width: 32px;
+  height: 32px;
+}

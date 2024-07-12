@@ -4,11 +4,14 @@ import type { BlogListTypes } from './BlogList.types';
 import Markdown from '@/components/ui/Markdown';
 import { sanityFetch } from '@/utils/sanity.fetch';
 import BlogPostItem, { BlogPostItem_Query, BlogPostItemTypes } from '@/components/ui/BlogPostItem';
+import Pagination from '@/components/ui/Pagination';
+
+const POSTS_PER_PAGE = 6;
 
 const query = async (): Promise<BlogPostItemTypes[]> => {
   return await sanityFetch({
     query: `
-      *[_type == "BlogPost_Collection"] | order(_createdAt desc) [0...6]{
+      *[_type == "BlogPost_Collection"] | order(_createdAt desc) [0...${POSTS_PER_PAGE}]{
     ${BlogPostItem_Query}
   }
     `,
@@ -16,9 +19,8 @@ const query = async (): Promise<BlogPostItemTypes[]> => {
   });
 };
 
-export default async function BlogList({ title, subtitle }: BlogListTypes) {
+export default async function BlogList({ title, subtitle, params }: BlogListTypes) {
   const posts = await query();
-  console.log(posts);
   return (
     <section className={styles.section}>
       <SectionHeader>
@@ -30,6 +32,7 @@ export default async function BlogList({ title, subtitle }: BlogListTypes) {
           <BlogPostItem {...post} key={i} />
         ))}
       </div>
+      <Pagination page={params['page']} postsPerPage={POSTS_PER_PAGE} numPosts={8} />
     </section>
   );
 }

@@ -10,6 +10,7 @@
     "rfc": "plop"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
     "@sanity/webhook": "^4.0.4",
     "next": "14.2.4",
     "next-mdx-remote": "^5.0.0",

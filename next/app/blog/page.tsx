@@ -13,7 +13,7 @@ const query = async (): Promise<{ title: string; subtitle: string }> => {
   });
 };
 
-export default async function page() {
+export default async function page({ searchParams }: { searchParams: { [key: string]: string } }) {
   const { title, subtitle } = await query();
-  return <BlogList title={title} subtitle={subtitle} />;
+  return <BlogList params={searchParams} title={title} subtitle={subtitle} />;
 }
