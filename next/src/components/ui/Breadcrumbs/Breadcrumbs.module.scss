@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: clamp(24px, calc(32vw / 7.68), 32px);
+  font-weight: 500;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.item {
+  font-size: clamp(calc(12rem / 16), calc(14vw / 7.68), calc(14rem / 16));
+}

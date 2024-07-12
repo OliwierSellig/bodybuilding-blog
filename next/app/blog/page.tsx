@@ -1,5 +1,14 @@
 import BlogList from '@/components/_Blog/BlogList';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { sanityFetch } from '@/utils/sanity.fetch';
+
+const currentPath = '/blog';
+const breadcrumbs = [
+  {
+    name: 'Blog',
+    path: currentPath,
+  },
+];
 
 const query = async (): Promise<{ title: string; subtitle: string }> => {
   return await sanityFetch({
@@ -15,5 +24,10 @@ const query = async (): Promise<{ title: string; subtitle: string }> => {
 
 export default async function page({ searchParams }: { searchParams: { [key: string]: string } }) {
   const { title, subtitle } = await query();
-  return <BlogList params={searchParams} title={title} subtitle={subtitle} />;
+  return (
+    <>
+      <Breadcrumbs data={breadcrumbs} />
+      <BlogList params={searchParams} title={title} subtitle={subtitle} />
+    </>
+  );
 }

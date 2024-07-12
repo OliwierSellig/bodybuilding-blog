@@ -3,6 +3,8 @@ import { BlogPostPageTypes, BlogPostQueryTypes } from './page.types';
 import { ImgDataQuery } from '@/components/ui/image';
 import BlogPageHero from '@/components/_Blog/BlogPageHero';
 import BlogPageContent from '@/components/_Blog/BlogPageContent';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { removeMarkdown } from '@/utils/remove-markdown';
 
 const BlogPost_Query = `
     title,
@@ -31,6 +33,12 @@ export default async function page({ params: { slug } }: BlogPostPageTypes) {
   const { title, description, content, _createdAt, image } = await query(slug);
   return (
     <>
+      <Breadcrumbs
+        data={[
+          { name: 'Blog', path: '/blog' },
+          { name: removeMarkdown(title), path: slug },
+        ]}
+      />
       <BlogPageHero title={title} description={description} createdAt={_createdAt} image={image} />
       <BlogPageContent content={content} />
     </>
