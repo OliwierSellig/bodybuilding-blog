@@ -5,6 +5,7 @@ import BlogPageHero from '@/components/_Blog/BlogPageHero';
 import BlogPageContent from '@/components/_Blog/BlogPageContent';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { removeMarkdown } from '@/utils/remove-markdown';
+import { Metadata } from 'next';
 
 const BlogPost_Query = `
     title,
@@ -28,6 +29,11 @@ const query = async (slug: string): Promise<BlogPostQueryTypes> => {
     tags: ['BlogPost_Collection'],
   });
 };
+
+export async function generateMetadata({ params: { slug } }: BlogPostPageTypes): Promise<Metadata> {
+  const { title } = await query(slug);
+  return { title };
+}
 
 export default async function page({ params: { slug } }: BlogPostPageTypes) {
   const { title, description, content, _createdAt, image } = await query(slug);

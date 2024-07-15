@@ -3,6 +3,7 @@ import '@/global/global.scss';
 import { cityStreetwearTtf, cityStreetwearWoff, cityStreetwearWoff2, lato, plusJakartaSans } from '../src/global/fonts';
 import Header from '@/components/global/Header';
 import Footer from '@/components/global/Footer';
+import OgImage from '@/app/opengraph-image.webp';
 
 export const metadata: Metadata = {
   title: {
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
   },
+  openGraph: { images: [O] },
 };
 
 export default function RootLayout({
