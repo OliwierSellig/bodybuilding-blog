@@ -29,6 +29,7 @@ const query = async (): Promise<{ title: string; subtitle: string }> => {
 
 export default async function page({ searchParams }: { searchParams: { [key: string]: string } }) {
   const { title, subtitle } = await query();
+
   return (
     <>
       <Breadcrumbs data={breadcrumbs} />
